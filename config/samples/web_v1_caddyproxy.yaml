@@ -1,0 +1,12 @@
+apiVersion: web.dev.fadur/v1
+kind: CaddyProxy
+metadata:
+  labels:
+    app.kubernetes.io/name: caddyproxy
+    app.kubernetes.io/instance: caddyproxy-sample
+    app.kubernetes.io/part-of: caddy-operator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: caddy-operator
+  name: caddyproxy-sample
+spec:
+  # TODO(user): Add fields here

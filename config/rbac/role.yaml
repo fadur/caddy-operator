@@ -1,0 +1,32 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: manager-role
+rules:
+- apiGroups:
+  - web.dev.fadur
+  resources:
+  - caddyproxies
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - web.dev.fadur
+  resources:
+  - caddyproxies/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - web.dev.fadur
+  resources:
+  - caddyproxies/status
+  verbs:
+  - get
+  - patch
+  - update

@@ -1,0 +1,27 @@
+# permissions for end users to view caddyproxies.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: caddyproxy-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: caddy-operator
+    app.kubernetes.io/part-of: caddy-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: caddyproxy-viewer-role
+rules:
+- apiGroups:
+  - web.dev.fadur
+  resources:
+  - caddyproxies
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - web.dev.fadur
+  resources:
+  - caddyproxies/status
+  verbs:
+  - get
