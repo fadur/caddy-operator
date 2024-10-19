@@ -10,3 +10,4 @@ metadata:
   name: caddyproxy-sample
 spec:
   # TODO(user): Add fields here
+  version: "1.0.0"
