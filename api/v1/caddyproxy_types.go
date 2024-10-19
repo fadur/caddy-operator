@@ -30,6 +30,7 @@ type CaddyProxySpec struct {
 
 	// Foo is an example field of CaddyProxy. Edit caddyproxy_types.go to remove/update
 	Image string `json:"image"`
+	Version string `json:"version"` // Pf1fa
 }
 
 // CaddyProxyStatus defines the observed state of CaddyProxy
